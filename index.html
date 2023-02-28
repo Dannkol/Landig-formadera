@@ -13,11 +13,13 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="bg-primary">
-    <header class="position-sticky top-0">
-      <nav class="navbar navbar-dark bg-dark navbar-expand-lg m-2 rounded-5 ">
-        <div class="container-fluid ">
-          <a class="navbar-brand m-0 text-light fs-2" href="#">FORMADERA</a>
+  <body class="bg-primary overflow-hidden">
+    <header class="vh-100" id="main">
+      <nav
+        class="navbar navbar-dark bg-dark navbar-expand-lg my-2 rounded-5 position-fixed top-0 w-100"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand m-0 text-light fs-2" href="#main">FORMADERA</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -29,20 +31,29 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse flex-grow-0 me-0 " id="navbarToggler">
+          <div
+            class="collapse navbar-collapse flex-grow-0 me-0"
+            id="navbarToggler"
+          >
             <ul class="navbar-nav text-end w-100">
               <li class="nav-item w-100">
-                <a class="nav-link text-light fs-4 rounded-pill px-3" href="#"
+                <a
+                  class="nav-link text-light fs-4 rounded-pill px-3"
+                  href="#main"
                   >HOME</a
                 >
               </li>
               <li class="nav-item w-100">
-                <a class="nav-link text-light fs-4 rounded-pill px-3" href="#"
+                <a
+                  class="nav-link text-light fs-4 rounded-pill px-3"
+                  href="#Servicios"
                   >SERVICIOS</a
                 >
               </li>
               <li class="nav-item w-100">
-                <a class="nav-link text-light fs-4 rounded-pill px-3" href="#"
+                <a
+                  class="nav-link text-light fs-4 rounded-pill px-3"
+                  href="#Clientes"
                   >CLIENTES</a
                 >
               </li>
@@ -60,55 +71,322 @@
           </div>
         </div>
       </nav>
-    </header>
-    <main>
+
       <div
-        class="clientes d-flex flex-column align-items-center justify-content-center bg-primary"
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide h-100 d-flex align-items-center"
+        data-bs-ride="carousel"
       >
-        <div class="clientes__titulo">
-          <h2 class="text-center">Cientes</h2>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <div
+              class="d-flex flex-lg-row flex-wrap justify-content-center h-100 w-auto"
+            >
+              <img
+                src="asset/icons/Ellipse 1.svg"
+                class="img-fluid"
+                alt="slide1"
+              />
+
+              <div class="d-flex justify-content-center align-items-center">
+                <h1 class="fs-1">FORMADERA SOLUCIONES1</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item h-100" data-bs-interval="2000">
+            <div
+              class="d-flex flex-lg-row flex-wrap justify-content-center h-100 w-auto"
+            >
+              <img
+                src="asset/icons/Ellipse 1.svg"
+                class="img-fluid"
+                alt="slide1"
+              />
+
+              <div class="d-flex justify-content-center align-items-center">
+                <h1 class="fs-1">FORMADERA SOLUCIONES2</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <div
+              class="d-flex flex-lg-row flex-wrap justify-content-center h-100 w-auto"
+            >
+              <img
+                src="asset/icons/Ellipse 1.svg"
+                class="d-block"
+                alt="slide1"
+              />
+
+              <div class="d-flex justify-content-center align-items-center">
+                <h1 class="fs-1">FORMADERA SOLUCIONES1</h1>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="clientes__cards mt-5 d-flex flex-column flex-lg-row justify-content-center gap-5"
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
         >
-          <div class="cliente">
-            <div class="card" style="width: 18rem">
-              <img src="img/Cliente1.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">JIMENA RODRIGUEZ</h5>
-                <p class="card-text">
-                  Quede encantada con el servicio, muy buena calidad, muy
-                  amables y sobre todo bastante economico
-                </p>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+    <main class="vh-100">
+      <section id="Servicios" class="h-100">
+        <div
+          id="carouselExampleDark2"
+          class="carousel carousel-dark slide h-100 d-flex align-items-center"
+          data-bs-ride="carouse2"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div
+                class="d-flex flex-column flex-wrap justify-content-center h-75 w-auto"
+              >
+                <div class="d-flex justify-content-center align-items-center">
+                  <h4>Tableros y Oficina</h4>
+                </div>
+                <!-- Button trigger modal -->
+                <img
+                  src="img/Servicios/Tablero.svg"
+                  class="img-fluid"
+                  role="button"
+                  alt="slide1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                />
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Catalogo de tableros
+                        </h5>
+                      </div>
+                      <div class="modal-body">...</div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100" data-bs-interval="2000">
+              <div
+                class="d-flex flex-column flex-wrap justify-content-center h-100 w-auto"
+              >
+                <div class="d-flex justify-content-center align-items-center">
+                  <h4>Mubebleria</h4>
+                </div>
+                <!-- Button trigger modal -->
+                <img
+                  src="img/Servicios/Muebleria.svg"
+                  class="img-fluid"
+                  role="button"
+                  alt="slide1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModa2"
+                />
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModa2"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Modal title
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">...</div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          Save changes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div
+                class="d-flex flex-column flex-wrap justify-content-center h-100 w-auto"
+              >
+                <div class="d-flex justify-content-center align-items-center">
+                  <h4>Soluciones Arquitectonicas</h4>
+                </div>
+                <!-- Button trigger modal -->
+                <img
+                  src="img/Servicios/Soluciones.svg"
+                  class="img-fluid"
+                  role="button"
+                  alt="slide1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModa3"
+                />
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabe3"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Modal title
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">...</div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                          Save changes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="cliente">
-            <div class="card" style="width: 18rem">
-              <img src="img/Cliente2.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">ROBERTO GOMEZ</h5>
-                <p class="card-text">
-                  Que elegancia, los terminados quedaron increibles, de muy
-                  buena calidad, diez de diez
-                </p>
-              </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark2"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark2"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="h-100 d-flex justify-content-center align-items-center"
+        id="Clientes"
+      >
+        <div class="overflow-auto h-75">
+          <div
+            class="clientes d-flex flex-column align-items-center justify-content-center bg-primary"
+          >
+            <div class="clientes__titulo">
+              <h2 class="text-center">Cientes</h2>
             </div>
-          </div>
-          <div class="cliente">
-            <div class="card" style="width: 18rem">
-              <img src="img/Cliente3.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">VALERIA GOMEZ</h5>
-                <p class="card-text">
-                  A pesar de la legania, el pedido llego en excelentes
-                  condiciones, increible trabajo muchachos..
-                </p>
+            <div
+              class="clientes__cards mt-5 d-flex flex-column flex-lg-row justify-content-center gap-5"
+            >
+              <div class="cliente">
+                <div class="card" style="width: 18rem">
+                  <img src="img/Cliente1.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">JIMENA RODRIGUEZ</h5>
+                    <p class="card-text">
+                      Quede encantada con el servicio, muy buena calidad, muy
+                      amables y sobre todo bastante economico
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="cliente">
+                <div class="card" style="width: 18rem">
+                  <img src="img/Cliente2.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">ROBERTO GOMEZ</h5>
+                    <p class="card-text">
+                      Que elegancia, los terminados quedaron increibles, de muy
+                      buena calidad, diez de diez
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="cliente">
+                <div class="card" style="width: 18rem">
+                  <img src="img/Cliente3.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">VALERIA GOMEZ</h5>
+                    <p class="card-text">
+                      A pesar de la legania, el pedido llego en excelentes
+                      condiciones, increible trabajo muchachos..
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
   <script
